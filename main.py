@@ -1,6 +1,7 @@
 import time
 
 tasks=[]
+index = 1
 
 def add_function():
     function_to_add = input("Fill this land with task you want to add:")
