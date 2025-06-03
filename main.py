@@ -27,6 +27,7 @@ def list_tasks():
 def exit_command():
     quit()
 
+крп
 if __name__=="__main__":
     print("Welcome to the ToDo list app :")
     while True:
