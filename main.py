@@ -1,6 +1,7 @@
 import time
 
 tasks=[]
+done_tasks=[]
 index = 1
 
 def add_function():
@@ -8,6 +9,12 @@ def add_function():
     tasks.append(function_to_add)
     print(tasks)
     time.sleep(1)
+
+def mark_as_done():
+    print(tasks)
+    m_as_done = int(input("Choose which task you want to mark as done"))
+    tasks = done_tasks.copy(m_as_done)
+    print(tasks)
 
 
 def delete_tasks():
@@ -27,7 +34,6 @@ def list_tasks():
 def exit_command():
     quit()
 
-крп
 if __name__=="__main__":
     print("Welcome to the ToDo list app :")
     while True:
@@ -37,7 +43,8 @@ if __name__=="__main__":
         print("1. Add the task")
         print("2. Delete a task")
         print("3. List tasks")
-        print("4. Quit")
+        print("4. Mark as done")
+        print("5. Quit")
 
         choice = input("Enter your choice: ")
 
@@ -55,6 +62,8 @@ if __name__=="__main__":
             list_tasks()
             time.sleep(1)
         elif choice == "4":
+            mark_as_done()
+        elif choice == "5":
             exit_command()
         else:
             print("Invalid input. Please try again.")
